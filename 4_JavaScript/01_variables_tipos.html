@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Variables y Tipos de Datos</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .contenedor {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #764ba2;
+            margin-top: 30px;
+        }
+        
+        .seccion {
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #667eea;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .codigo {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 10px 0;
+            font-size: 0.9em;
+        }
+        
+        button {
+            background-color: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #764ba2;
+        }
+        
+        .resultado {
+            background: #e8f4f8;
+            border: 2px solid #667eea;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        
+        .resultado-titulo {
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>🚀 JavaScript - Variables y Tipos de Datos</h1>
+        <p>Explora los conceptos fundamentales de JavaScript interactivamente.</p>
+        
+        <!-- Variables -->
+        <h2>📝 Variables</h2>
+        <div class="seccion">
+            <p><strong>Las variables son contenedores para almacenar valores.</strong></p>
+            <div class="codigo">
+let nombre = "Juan";  // String
+let edad = 25;        // Number
+const ciudad = "Madrid"; // Constante
+            </div>
+            <button onclick="ejemploVariables()">Ver Ejemplo de Variables</button>
+            <div id="resultado-variables" class="resultado" style="display:none;"></div>
+        </div>
+        
+        <!-- Tipos de Datos -->
+        <h2>🎨 Tipos de Datos</h2>
+        <div class="seccion">
+            <p><strong>JavaScript tiene varios tipos de datos primitivos:</strong></p>
+            <div class="codigo">
+// String (Texto)
+let texto = "Hola Mundo";
+
+// Number (Números)
+let entero = 42;
+let decimal = 3.14;
+
+// Boolean (Verdadero/Falso)
+let esActivo = true;
+
+// Array (Lista)
+let colores = ['rojo', 'verde', 'azul'];
+
+// Object (Objeto)
+let persona = { nombre: 'Juan', edad: 25 };
+            </div>
+            <button onclick="ejemploTipos()">Ver Tipos de Datos</button>
+            <div id="resultado-tipos" class="resultado" style="display:none;"></div>
+        </div>
+        
+        <!-- Operadores -->
+        <h2>🔢 Operadores Aritméticos</h2>
+        <div class="seccion">
+            <p><strong>Operaciones matemáticas básicas:</strong></p>
+            <div class="codigo">
+let a = 10;
+let b = 3;
+
+console.log(a + b);  // 13 - Suma
+console.log(a - b);  // 7  - Resta
+console.log(a * b);  // 30 - Multiplicación
+console.log(a / b);  // 3.33... - División
+console.log(a % b);  // 1 - Módulo
+console.log(a ** b); // 1000 - Potencia
+            </div>
+            <button onclick="ejemploOperadores()">Ver Operadores</button>
+            <div id="resultado-operadores" class="resultado" style="display:none;"></div>
+        </div>
+        
+        <!-- Comparación -->
+        <h2>⚖️ Operadores de Comparación</h2>
+        <div class="seccion">
+            <p><strong>Comparar valores y devuelven true o false:</strong></p>
+            <div class="codigo">
+let x = 5;
+let y = "5";
+
+console.log(x == y);   // true (comparación de valor)
+console.log(x === y);  // false (comparación estricta)
+console.log(x != y);   // false
+console.log(x > 3);    // true
+console.log(x < 10);   // true
+            </div>
+            <button onclick="ejemploComparacion()">Ver Comparaciones</button>
+            <div id="resultado-comparacion" class="resultado" style="display:none;"></div>
+        </div>
+        
+        <!-- Strings -->
+        <h2>📚 Operaciones con Strings</h2>
+        <div class="seccion">
+            <p><strong>Manipulación de texto:</strong></p>
+            <div class="codigo">
+let nombre = "Juan";
+let apellido = "Pérez";
+
+// Concatenación
+let nombreCompleto = nombre + " " + apellido;
+
+// Template Literals
+let saludo = `Hola, ${nombre}!`;
+
+// Métodos
+console.log(nombre.length);      // 4
+console.log(nombre.toUpperCase()); // JUAN
+console.log(nombre.toLowerCase()); // juan
+            </div>
+            <button onclick="ejemploStrings()">Ver Operaciones con Strings</button>
+            <div id="resultado-strings" class="resultado" style="display:none;"></div>
+        </div>
+        
+        <!-- Arrays -->
+        <h2>📋 Arrays (Listas)</h2>
+        <div class="seccion">
+            <p><strong>Trabajo con arrays:</strong></p>
+            <div class="codigo">
+let numeros = [1, 2, 3, 4, 5];
+
+// Acceder a elementos
+console.log(numeros[0]);  // 1
+
+// Longitud
+console.log(numeros.length); // 5
+
+// Añadir elemento
+numeros.push(6);
+
+// Iterar
+numeros.forEach(num => console.log(num));
+            </div>
+            <button onclick="ejemploArrays()">Ver Arrays</button>
+            <div id="resultado-arrays" class="resultado" style="display:none;"></div>
+        </div>
+        
+        <!-- Funciones -->
+        <h2>🔧 Funciones</h2>
+        <div class="seccion">
+            <p><strong>Crear y usar funciones:</strong></p>
+            <div class="codigo">
+// Función tradicional
+function saludar(nombre) {
+    return `Hola, ${nombre}!`;
+}
+
+// Arrow Function
+const sumar = (a, b) => a + b;
+
+console.log(saludar("Juan"));
+console.log(sumar(5, 3));  // 8
+            </div>
+            <button onclick="ejemploFunciones()">Ver Funciones</button>
+            <div id="resultado-funciones" class="resultado" style="display:none;"></div>
+        </div>
+        
+        <!-- Desafío -->
+        <h2>💪 Desafío Interactivo</h2>
+        <div class="seccion">
+            <p><strong>Calcula el resultado:</strong></p>
+            <div>
+                <label for="numero1">Número 1:</label>
+                <input type="number" id="numero1" value="10">
+                <br><br>
+                <label for="numero2">Número 2:</label>
+                <input type="number" id="numero2" value="5">
+                <br><br>
+                <button onclick="desafio()">Calcular Suma</button>
+                <button onclick="desafio2()">Calcular Multiplicación</button>
+                <button onclick="desafio3()">Crear Lista</button>
+            </div>
+            <div id="resultado-desafio" class="resultado" style="display:none;"></div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 - JavaScript Fundamentals | Bertha46</p>
+    </footer>
+    
+    <script>
+        function mostrarResultado(id, contenido) {
+            const div = document.getElementById(id);
+            div.innerHTML = contenido;
+            div.style.display = 'block';
+        }
+        
+        function ejemploVariables() {
+            let nombre = "Juan";
+            let edad = 25;
+            const ciudad = "Madrid";
+            
+            let html = `<div class="resultado-titulo">Resultado:</div>`;
+            html += `<p>Nombre: <strong>${nombre}</strong></p>`;
+            html += `<p>Edad: <strong>${edad}</strong></p>`;
+            html += `<p>Ciudad: <strong>${ciudad}</strong></p>`;
+            
+            mostrarResultado('resultado-variables', html);
+        }
+        
+        function ejemploTipos() {
+            let html = `<div class="resultado-titulo">Tipos de Datos:</div>`;
+            html += `<p>String: "Hola" | Tipo: ${typeof "Hola"}</p>`;
+            html += `<p>Number: 42 | Tipo: ${typeof 42}</p>`;
+            html += `<p>Boolean: true | Tipo: ${typeof true}</p>`;
+            html += `<p>Array: [1,2,3] | Tipo: ${typeof [1,2,3]}</p>`;
+            html += `<p>Object: {a:1} | Tipo: ${typeof {a:1}}</p>`;
+            
+            mostrarResultado('resultado-tipos', html);
+        }
+        
+        function ejemploOperadores() {
+            let a = 10;
+            let b = 3;
+            
+            let html = `<div class="resultado-titulo">Operaciones Aritméticas:</div>`;
+            html += `<p>${a} + ${b} = ${a + b}</p>`;
+            html += `<p>${a} - ${b} = ${a - b}</p>`;
+            html += `<p>${a} × ${b} = ${a * b}</p>`;
+            html += `<p>${a} ÷ ${b} = ${(a / b).toFixed(2)}</p>`;
+            html += `<p>${a} % ${b} = ${a % b}</p>`;
+            html += `<p>${a} ^ ${b} = ${a ** b}</p>`;
+            
+            mostrarResultado('resultado-operadores', html);
+        }
+        
+        function ejemploComparacion() {
+            let x = 5;
+            let y = "5";
+            
+            let html = `<div class="resultado-titulo">Comparaciones:</div>`;
+            html += `<p>${x} == ${y} → ${x == y} (valor)</p>`;
+            html += `<p>${x} === ${y} → ${x === y} (estricto)</p>`;
+            html += `<p>${x} > 3 → ${x > 3}</p>`;
+            html += `<p>${x} < 10 → ${x < 10}</p>`;
+            html += `<p>${x} >= 5 → ${x >= 5}</p>`;
+            html += `<p>${x} <= 5 → ${x <= 5}</p>`;
+            
+            mostrarResultado('resultado-comparacion', html);
+        }
+        
+        function ejemploStrings() {
+            let nombre = "JavaScript";
+            
+            let html = `<div class="resultado-titulo">Operaciones con Strings:</div>`;
+            html += `<p>Texto: "${nombre}"</p>`;
+            html += `<p>Longitud: ${nombre.length}</p>`;
+            html += `<p>Mayúsculas: ${nombre.toUpperCase()}</p>`;
+            html += `<p>Minúsculas: ${nombre.toLowerCase()}</p>`;
+            html += `<p>Incluye 'Script': ${nombre.includes('Script')}</p>`;
+            html += `<p>Posición de 'S': ${nombre.indexOf('S')}</p>`;
+            
+            mostrarResultado('resultado-strings', html);
+        }
+        
+        function ejemploArrays() {
+            let colores = ['rojo', 'verde', 'azul', 'amarillo'];
+            
+            let html = `<div class="resultado-titulo">Arrays:</div>`;
+            html += `<p>Array: [${colores.join(', ')}]</p>`;
+            html += `<p>Longitud: ${colores.length}</p>`;
+            html += `<p>Primer elemento: ${colores[0]}</p>`;
+            html += `<p>Último elemento: ${colores[colores.length - 1]}</p>`;
+            html += `<p>En mayúsculas: [${colores.map(c => c.toUpperCase()).join(', ')}]</p>`;
+            
+            mostrarResultado('resultado-arrays', html);
+        }
+        
+        function ejemploFunciones() {
+            const saludar = (nombre) => `¡Hola, ${nombre}!`;
+            const sumar = (a, b) => a + b;
+            const multiplicar = (a, b) => a * b;
+            
+            let html = `<div class="resultado-titulo">Funciones:</div>`;
+            html += `<p>saludar('Juan'): ${saludar('Juan')}</p>`;
+            html += `<p>sumar(5, 3): ${sumar(5, 3)}</p>`;
+            html += `<p>multiplicar(4, 6): ${multiplicar(4, 6)}</p>`;
+            
+            mostrarResultado('resultado-funciones', html);
+        }
+        
+        function desafio() {
+            let num1 = parseFloat(document.getElementById('numero1').value);
+            let num2 = parseFloat(document.getElementById('numero2').value);
+            let suma = num1 + num2;
+            
+            let html = `<div class="resultado-titulo">Desafío - Suma:</div>`;
+            html += `<p>${num1} + ${num2} = <strong>${suma}</strong></p>`;
+            
+            mostrarResultado('resultado-desafio', html);
+        }
+        
+        function desafio2() {
+            let num1 = parseFloat(document.getElementById('numero1').value);
+            let num2 = parseFloat(document.getElementById('numero2').value);
+            let producto = num1 * num2;
+            
+            let html = `<div class="resultado-titulo">Desafío - Multiplicación:</div>`;
+            html += `<p>${num1} × ${num2} = <strong>${producto}</strong></p>`;
+            
+            mostrarResultado('resultado-desafio', html);
+        }
+        
+        function desafio3() {
+            let num1 = parseInt(document.getElementById('numero1').value);
+            let num2 = parseInt(document.getElementById('numero2').value);
+            let array = [];
+            
+            for (let i = num1; i <= num2; i++) {
+                array.push(i);
+            }
+            
+            let html = `<div class="resultado-titulo">Desafío - Lista:</div>`;
+            html += `<p>Array de ${num1} a ${num2}:</p>`;
+            html += `<p><strong>[${array.join(', ')}]</strong></p>`;
+            html += `<p>Total de elementos: ${array.length}</p>`;
+            
+            mostrarResultado('resultado-desafio', html);
+        }
+    </script>
+</body>
+</html>

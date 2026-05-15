@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Ejemplo Completo</title>
+    <style>
+        /* Estilos Globales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Encabezado */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Contenedor Principal */
+        .contenedor {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        
+        /* Párrafos */
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        /* Sección de Boxes */
+        .boxes {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .box {
+            flex: 1;
+            min-width: 250px;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .box h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        
+        /* Tabla */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th {
+            background-color: #667eea;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        /* Enlaces */
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+        
+        /* Lista */
+        .lista-estilos {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .lista-estilos li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .lista-estilos li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        /* Botones */
+        .boton {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            margin: 5px;
+        }
+        
+        .boton:hover {
+            background-color: #764ba2;
+        }
+        
+        .boton-secundario {
+            background-color: #f0f0f0;
+            color: #333;
+            border: 2px solid #667eea;
+        }
+        
+        .boton-secundario:hover {
+            background-color: #667eea;
+            color: white;
+        }
+        
+        /* Pie de página */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8em; }
+            .boxes { flex-direction: column; }
+            .contenedor { margin: 20px 10px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>🎨 Introducción a CSS</h1>
+        <p>Aprende selectores y propiedades CSS fundamentales</p>
+    </header>
+    
+    <!-- Contenedor Principal -->
+    <div class="contenedor">
+        <h2>¿Qué es CSS?</h2>
+        <p>CSS (Cascading Style Sheets) es el lenguaje de estilos que se utiliza para definir cómo se presentan los elementos HTML. Permite controlar aspectos visuales como colores, tipografía, espaciado y diseño.</p>
+        
+        <!-- Boxes de Características -->
+        <h2>Características Principales</h2>
+        <div class="boxes">
+            <div class="box">
+                <h3>🎯 Selectores</h3>
+                <p>Elementos, clases, IDs y más para aplicar estilos específicos</p>
+            </div>
+            <div class="box">
+                <h3>🌈 Colores</h3>
+                <p>Define colores de texto, fondo y bordes de forma flexible</p>
+            </div>
+            <div class="box">
+                <h3>📏 Espaciado</h3>
+                <p>Controla márgenes, relleno y tamaños con precisión</p>
+            </div>
+        </div>
+        
+        <!-- Tabla de Selectores -->
+        <h2>Tipos de Selectores</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Sintaxis</th>
+                    <th>Ejemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Elemento</td>
+                    <td>p</td>
+                    <td>p { color: blue; }</td>
+                </tr>
+                <tr>
+                    <td>Clase</td>
+                    <td>.nombre</td>
+                    <td>.titulo { font-size: 24px; }</td>
+                </tr>
+                <tr>
+                    <td>ID</td>
+                    <td>#nombre</td>
+                    <td>#principal { width: 100%; }</td>
+                </tr>
+                <tr>
+                    <td>Atributo</td>
+                    <td>[atributo]</td>
+                    <td>input[type="text"] { padding: 5px; }</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Lista de Propiedades -->
+        <h2>Propiedades CSS Esenciales</h2>
+        <ul class="lista-estilos">
+            <li><strong>color:</strong> Define el color del texto</li>
+            <li><strong>background-color:</strong> Color de fondo</li>
+            <li><strong>font-size:</strong> Tamaño de la fuente</li>
+            <li><strong>padding:</strong> Espacio interior</li>
+            <li><strong>margin:</strong> Espacio exterior</li>
+            <li><strong>border:</strong> Borde del elemento</li>
+            <li><strong>display:</strong> Tipo de visualización (block, inline, flex, grid)</li>
+            <li><strong>width/height:</strong> Ancho y alto del elemento</li>
+        </ul>
+        
+        <!-- Botones de Ejemplo -->
+        <h2>Componentes Interactivos</h2>
+        <button class="boton">Botón Principal</button>
+        <button class="boton boton-secundario">Botón Secundario</button>
+        <a href="#" class="boton">Enlace como Botón</a>
+    </div>
+    
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 - CSS Fundamentals | Bertha46</p>
+    </footer>
+</body>
+</html>
